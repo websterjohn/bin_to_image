@@ -2,7 +2,13 @@ import os
 import math
 import sys
 
+if len(sys.argv) < 2:
+    print("usage: bin_to_ppm.py [PATH]")
+    print("PATH is the path to the binary file to inspect")
+    sys.exit()
+
 input_file_path = sys.argv[1]
+
 input_file = open(input_file_path,"rb")
 output_file = open('output.ppm', 'w')
 file_array = []
